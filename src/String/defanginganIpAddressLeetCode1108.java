@@ -4,7 +4,7 @@ public class defanginganIpAddressLeetCode1108 {
 
 
     public static void main(String[] args) {
-        String string = "1.1.1.1.1";
+        String string = "1.1.1.1";
         System.out.println(defangIPaddr(string));
     }
     public static String defangIPaddr(String address) {
