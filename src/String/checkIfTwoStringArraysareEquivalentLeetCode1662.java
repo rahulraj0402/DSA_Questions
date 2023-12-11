@@ -11,7 +11,7 @@ public class checkIfTwoStringArraysareEquivalentLeetCode1662 {
 
         String[] s1 ={"ab", "c"};
         String[] s2 ={"a", "bc"};
-        // 
+        //
 
         System.out.println(arrayStringsAreEqual(s1,s2));
 
