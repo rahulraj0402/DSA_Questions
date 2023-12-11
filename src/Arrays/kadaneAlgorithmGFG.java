@@ -4,7 +4,7 @@ package Arrays;
 
 public class kadaneAlgorithmGFG {
     public static void main(String[] args) {
-        int[] arr = { 1,2,3,-2,5  };
+        int[] arr = { 1,2,3,-2,5 ,9 };
         int n = 5;
         System.out.println(maxSubarraySum(arr , n));
     }
