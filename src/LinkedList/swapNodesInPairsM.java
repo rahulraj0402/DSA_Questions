@@ -6,7 +6,7 @@ package LinkedList;
 // make a pointer point point to dummy head ,
 // make two pointer swap1 pointing to head
 // swap2 point to head.next .
-//  then make this in pen and paper just draw the arrow youll get it 
+//  then make this in pen and paper just draw the arrow youll get it
 
 
 public class swapNodesInPairsM {
