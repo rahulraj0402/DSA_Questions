@@ -64,7 +64,36 @@ public class AVL {
 
 
     private Node rotate(Node node){
-        
+        if (height(node.left) - height(node.right) > 1){
+
+            // if the diffrence of left and right child > 1 | left heavy
+            // it means its left heavy : in this there is two cases || left - left || left - right
+
+           if (height(node.left.left) - height(node.left.right) > 0 ){
+//             this is left left case
+               return rotateRight(node);
+           }
+           if (height(node.left.left) - height(node.left.right) < 0 ){
+//              this is left right case
+               node.left=rotateLeft(node.left);
+               return rotateRight(node);
+           }
+        }
+
+
+
+        return node;
+
+    }
+
+    public Node rotateRight(Node node){
+
+        return node;
+    }
+
+    public Node rotateLeft(Node node){
+
+        return node;
     }
 
 
