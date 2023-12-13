@@ -12,7 +12,7 @@ package BinarySearch;
 //              s/e
 //               e    s                // breaking the while loop and here we can  see that e is
 //                                      pointing to biggest number smaller then target
-//                                      so , just return the end . 
+//                                      so , just return the end .  
 
 
 public class floorOfTheNumber {
