@@ -17,7 +17,7 @@ public class findSmallestLetterGreaterThanTargeLeetCode744 {
 
     // [ x , x , y , y ]
 //                            while condition will break when start = end + 1 | means start becoming the length of the array
-//           0   1   2   3    4    
+//           0   1   2   3    4
 //         [ x , x , y , y ]           length of arrray is 4 | so here we have to return the first index
 ////                         s  { }     character[ start % lengt ] = character[0]
 
