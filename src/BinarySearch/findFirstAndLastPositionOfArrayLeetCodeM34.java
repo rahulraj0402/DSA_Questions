@@ -4,7 +4,7 @@ package BinarySearch;
 // lets understand the problem first .
 // index no :                   0   1   2   3   4   5   6   7
 //  lets say we have an array [ 5 , 7 , 7 , 7 , 7 , 8 , 8 , 10 ] ;
-// target = 8 :
+// target = 7 :
 // means we have to find the first occurence of 8 and last occurence of 8 .
 // now the intuition .
 //
