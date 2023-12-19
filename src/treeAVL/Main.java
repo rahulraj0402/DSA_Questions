@@ -4,10 +4,12 @@ import treeBST.BST;
 
 public class Main {
     public static void main(String[] args) {
-        AVL avl = new AVL();
+        AVL tree = new AVL();
+        int nums[] = {9,24,43,12,97,14,43,14,65,765,90,34,45,56,67,78,0};
+        tree.populate(nums);
+        
 
-        int[] nums = {1,53,652,76,98,32,12,90,43};
-        avl.populate(nums);
-        avl.display();
+        tree.display();
+        System.out.println(tree.height());
     }
 }

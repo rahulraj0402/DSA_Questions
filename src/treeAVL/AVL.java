@@ -24,6 +24,10 @@ public class AVL {
     public AVL() {
     }
 
+    public int height() {
+        return height(root);
+    }
+
     public int height(Node node){
         if (node == null){
             return -1;
@@ -64,20 +68,45 @@ public class AVL {
 
 
     private Node rotate(Node node){
+
+        // this is for left heavy
         if (height(node.left) - height(node.right) > 1){
 
             // if the diffrence of left and right child > 1 | left heavy
-            // it means its left heavy : in this there is two cases || left - left || left - right
+            // it means its left heavy : in this there is two cases
+            //  left - left || left - right
 
-           if (height(node.left.left) - height(node.left.right) > 0 ){
-//             this is left left case
-               return rotateRight(node);
-           }
-           if (height(node.left.left) - height(node.left.right) < 0 ){
-//              this is left right case
-               node.left=rotateLeft(node.left);
-               return rotateRight(node);
-           }
+
+            if (height(node.left.left) - height(node.left.right) > 0){
+                // this is left -  left case so , so rotate right from (p) = node itself
+                return rotateRight(node);
+            }
+
+            if (height(node.left.left) - height(node.left.right) < 0){
+                // this is left right case ,
+                // so left rotate from (c) = node.left
+                // and right rotate from (p) = node
+                node.left = rotateLeft(node.left);
+                return rotateRight(node);
+            }
+
+        }
+
+
+
+        // this is for right heavy case
+        if (height(node.left) - height(node.right) < -1 ){
+
+            // this is right - right case
+            if (height(node.right.left) - height(node.right.right) < 0){
+                return rotateLeft(node);
+            }
+            // this is right left case
+            if (height(node.right.left) - height(node.right.right) > 0){
+                node.right=rotateRight(node.right);
+                return rotateLeft(node);
+            }
+
         }
 
 
@@ -86,14 +115,34 @@ public class AVL {
 
     }
 
-    public Node rotateRight(Node node){
+    public Node rotateRight(Node p){
 
-        return node;
+        Node c = p.left;
+        Node t = c.right;
+
+        c.right=p;
+        p.left=t;
+
+        // update the height
+        p.heigth = Math.max(height(p.left) , height(p.right) + 1);
+        c.heigth = Math.max(height(c.left) , height(c.right) + 1);
+
+        return c;
+
     }
 
-    public Node rotateLeft(Node node){
+    public Node rotateLeft(Node c){
 
-        return node;
+        Node p = c.right;
+        Node t = p.left;
+
+        p.left = c ;
+        c.right = t;
+
+        p.heigth = Math.max(height(p.left) , height(p.right) + 1);
+        c.heigth = Math.max(height(c.left) , height(c.right) + 1);
+
+        return p;
     }
 
 
