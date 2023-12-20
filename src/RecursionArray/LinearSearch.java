@@ -13,7 +13,22 @@ public class LinearSearch {
 
     }
 
-    // problem : we want to know all the indices where the target is present
+    // problem : we want to know all the indices where the target is present (ArrayList will be in body)
+
+//    public static ArrayList<Integer> search2(int[] nums , int index , int target){
+//        List<Integer> ans = new ArrayList<>();
+//
+//        if (index == nums.length-1){
+//            ans.add(index);
+//            return ans;
+//        }
+//    }
+
+
+
+
+
+    // problem : we want to know all the indices where the target is present (ArrayList in argument )
     public static ArrayList<Integer> search(int[] nums , int target , int index , ArrayList<Integer> list){
 
         if (index == nums.length-1){
