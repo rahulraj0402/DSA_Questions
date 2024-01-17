@@ -1,10 +1,5 @@
 package treeSegment;
-
-
-
 public class segmentTree {
-
-
 
     private class Node{
         int data;
@@ -65,7 +60,7 @@ public class segmentTree {
 
         // for current node
         str = str + "Interval=[" + node.startInterval + "-" + node.endInterval + " ] and " +
-                "data = " + node.data + "+ => ";
+                "data = " + node.data + "+ <= ";
 
 
         if (node.right != null){
@@ -113,6 +108,10 @@ public class segmentTree {
     }
 
     // update function
+
+    public void update(int index , int value){
+        this.root.data = update(this.root,index,value);
+    }
     public int update(Node node , int index , int value){
         if(index >= node.startInterval && index <= node.endInterval){
             if (index == node.startInterval && index == node.endInterval){
