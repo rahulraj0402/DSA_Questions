@@ -1,4 +1,4 @@
-package treeQuestionsLeetCode.ExtraQuestions;
+package treeQuestionsLeetCode;
 
 public class DaiamaterOfTreeDFS10 {
 
