@@ -88,8 +88,16 @@ public class  Heap<T extends Comparable<T>> {
             // calll downheap
             downheap(min);
         }
+    }
 
+    // this is for heap sort
+    public ArrayList<T> heapSort() throws Exception{
+        ArrayList<T> data = new ArrayList<>();
+        while (!list.isEmpty()){
+            data.add(this.remove());
+        }
 
+        return data;
     }
 
 
