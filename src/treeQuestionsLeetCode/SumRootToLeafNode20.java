@@ -6,26 +6,26 @@ import java.util.List;
 public class SumRootToLeafNode20 {
 
 
-
-    public int sumNumbers1(TreeNode root) {
-        return helper1(root , 0);
-
-    }
-    public int helper1(TreeNode node , int sum){
-        if (node == null){
-            return 0;
-        }
-
-        sum = sum * 10 + node.val;
-
-        // if it reaches to leaf node , just return the sum
-        if (node.left == null && node.right == null){
-            return sum;
-        }
-
-        return helper(node.left , sum) + helper(node.right , sum);
-
-    }
+//
+//    public int sumNumbers1(TreeNode root) {
+//        return helper1(root , 0);
+//
+//    }
+//    public int helper1(TreeNode node , int sum){
+//        if (node == null){
+//            return 0;
+//        }
+//
+//        sum = sum * 10 + node.val;
+//
+//        // if it reaches to leaf node , just return the sum
+//        if (node.left == null && node.right == null){
+//            return sum;
+//        }
+//
+//        return helper(node.left , sum) + helper(node.right , sum);
+//
+//    }
 //-----------------------------------------------------------------------------------------------------
     List<String> list = new ArrayList<>();
     public int sumNumbers(TreeNode root) {
