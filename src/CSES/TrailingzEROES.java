@@ -13,10 +13,10 @@ public class TrailingzEROES {
 
     // optimise approach
 
-    public static int trailing(int n){
-        int ans = 0 ;
-        
-    }
+//    public static int trailing(int n){
+//        int ans = 0 ;
+//
+//    }
 
 
 
