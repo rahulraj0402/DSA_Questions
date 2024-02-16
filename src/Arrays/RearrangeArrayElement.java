@@ -7,6 +7,11 @@ public class RearrangeArrayElement {
 
     }
 
+
+//    public int[] rearrangeArray1(int[] nums) {
+//
+//    }
+
     public int[] rearrangeArray(int[] nums) {
 
         ArrayList<Integer> positive  = new ArrayList<>();
