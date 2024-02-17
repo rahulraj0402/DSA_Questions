@@ -1,7 +1,6 @@
 package Heaps;
 import java.util.ArrayList;
 
-
 // this we are making as generic type
 public class  Heap<T extends Comparable<T>> {
 
@@ -99,8 +98,6 @@ public class  Heap<T extends Comparable<T>> {
 
         return data;
     }
-
-
 
 
     // make a swap function

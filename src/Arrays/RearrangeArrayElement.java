@@ -7,11 +7,6 @@ public class RearrangeArrayElement {
 
     }
 
-
-//    public int[] rearrangeArray1(int[] nums) {
-//
-//    }
-
     public int[] rearrangeArray(int[] nums) {
 
         ArrayList<Integer> positive  = new ArrayList<>();
@@ -35,11 +30,11 @@ public class RearrangeArrayElement {
 
         for (int i =  0 ; i < nums.length ; i++){
 
-            if (flag == true && positiveIndex < positive.size() ){
+            if (flag && positiveIndex < positive.size() ){
                 ans.add(positive.get(positiveIndex++));
                 flag = false;
             }
-            if (flag == false && negativeIndex < negative.size()){
+            if (!flag && negativeIndex < negative.size()){
                 ans.add(negative.get(negativeIndex++));
                 flag = true;
             }
