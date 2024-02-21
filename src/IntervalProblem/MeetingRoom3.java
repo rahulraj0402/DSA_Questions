@@ -36,5 +36,6 @@ public class MeetingRoom3 {
 
         }
 
+        return 2;
     }
 }
