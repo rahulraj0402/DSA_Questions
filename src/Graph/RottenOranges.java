@@ -18,10 +18,10 @@ public class RottenOranges {
 
     }
 
-    public static int orangesRotting(int[][] grid) {
-        int n = grid.length;
-        int m = grid[0].length;
-
-        Queue<Integer> queue = new LinkedList<>();
-    }
+//    public static int orangesRotting(int[][] grid) {
+//        int n = grid.length;
+//        int m = grid[0].length;
+//
+//        Queue<Integer> queue = new LinkedList<>();
+//    }
 }
