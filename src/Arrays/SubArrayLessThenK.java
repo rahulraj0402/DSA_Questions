@@ -15,6 +15,7 @@ public class SubArrayLessThenK {
        int n = nums.length;
        int count = 0 ;
 
+       // gey
        while (right < n){
            product*=nums[right];
            while (product >= k){
