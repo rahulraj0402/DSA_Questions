@@ -1,5 +1,6 @@
 package StackAndQueue;
 
+import java.util.IllegalFormatCodePointException;
 import java.util.Stack;
 
 public class RemoveKDigit {
@@ -7,7 +8,6 @@ public class RemoveKDigit {
         String num = "1432219";
         int k = 3;
         System.out.println(removeKdigits(num , k));
-
     }
 
 
@@ -19,7 +19,6 @@ public class RemoveKDigit {
             while (!stack.isEmpty() &&  k > 0 && stack.peek() > digit){
                 stack.pop();
                 k--;
-
             }
             stack.push(digit);
         }
