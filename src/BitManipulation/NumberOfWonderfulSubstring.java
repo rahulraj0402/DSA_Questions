@@ -12,7 +12,7 @@ public class NumberOfWonderfulSubstring {
         String word = "aabb";
         System.out.println(wonderfulSubstrings(word));
         System.out.println(wonderfulSubstringsOptimised(word));
-
+        System.out.println("correct code soon to be updated ");
     }
 
     public static long wonderfulSubstringsOptimisedCorrect(String word) {
