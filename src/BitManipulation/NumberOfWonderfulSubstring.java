@@ -12,7 +12,41 @@ public class NumberOfWonderfulSubstring {
         String word = "aabb";
         System.out.println(wonderfulSubstrings(word));
         System.out.println(wonderfulSubstringsOptimised(word));
-        System.out.println("correct code soon to be updated ");
+        System.out.println(isWonderfulString("aaabb"));
+
+    }
+
+
+    public static long wonderful(String word) {
+        HashMap<Long , Long> map = new HashMap<>();
+
+        // puttinh the 0000 for cummilitive xor
+
+        map.put(0L , 1L);
+        int curr_xor = 0;
+        long result = 0 ;
+
+        for (char ch : word.toCharArray()){
+            int shift = ch - 'a';
+            curr_xor ^= (1 << shift);
+
+            result += map.getOrDefault( (long)curr_xor , 0L );
+
+
+            // now for geting the odd characters
+
+            for (char ch1 = 'a' ; ch1 <= 'j' ; ch1++){
+                 shift = ch1 - 'a';
+                 // if the xor comes to be seen in past just increment the ans
+                 long checkForXor = (curr_xor^ (1 << shift));
+
+                 result += map.getOrDefault(checkForXor , 0L);
+
+            }
+            map.put((long)curr_xor , map.getOrDefault((long)curr_xor , 0L) + 1);
+        }
+
+        return result;
     }
 
     public static long wonderfulSubstringsOptimisedCorrect(String word) {
@@ -57,7 +91,7 @@ public class NumberOfWonderfulSubstring {
             map.put(cum_xor , map.getOrDefault(cum_xor , 0L) + 1);
             boolean seenInPast = map.containsKey(cum_xor);  // this is for the even characters
             if (seenInPast){
-                ans++;
+                ans +=  map.getOrDefault(cum_xor , 0L);;
             }
             seenInPast = false;
 
@@ -68,7 +102,7 @@ public class NumberOfWonderfulSubstring {
 
                seenInPast = map.containsKey(cum_xor);
                if (seenInPast){
-                   ans++;
+                   ans+= map.getOrDefault(cum_xor , 0L);
                }
            }
 
@@ -127,7 +161,7 @@ public class NumberOfWonderfulSubstring {
     }
 
     public static boolean isWonderfulString(String word) {
-        int[] count = new int[26];
+        int[] count = new int[10];
 
         for (char c : word.toCharArray()) {
             count[c - 'a']++;
