@@ -12,7 +12,9 @@ public class AndInRange {
             right = right>>1;
             total_shift_count++;
         }
+        System.out.println();
         return left<<total_shift_count;
+
     }
 
 }
