@@ -12,7 +12,6 @@ public class RemoveNodeFromTheList {
   }
 
 
-
 //  Approach 1 : using stacks [ Time complexity = 0(N) AND Space Complexity = O(n)
 public ListNode removeNodes(ListNode head) {
     Stack<ListNode> stack = new Stack<>();
