@@ -8,6 +8,7 @@ public class maximiseHappinesOfSelectedChildren {
        int[] happiness = {1,2,3};
        int k = 2;
 
+        System.out.println(maximumHappinessSum(happiness , k));
     }
 
     public static long maximumHappinessSum(int[] happiness, int k) {
