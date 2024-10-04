@@ -15,8 +15,7 @@ public class Hanoi {
      * Algo -
      * 1) Move (n-1) disk from A->B using C
      * 2) Move disk A->C
-     * 3) Move (n-1) disk B->c
-     *
+     * 3) Move (n-1) disk B -> C
      */
 
     public static void solveHanoi(int n, char fromRod, char toRod, char auxRod) {
