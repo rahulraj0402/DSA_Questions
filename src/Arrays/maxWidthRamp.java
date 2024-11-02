@@ -27,7 +27,6 @@ public class maxWidthRamp {
         return max_width;
     }
 
-    }
 
     public int maxWidthRamp(int[] nums) {
 
